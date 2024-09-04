@@ -24,27 +24,27 @@ export const Application = () => {
             </div>
             <div className="flex justify-center space-x-4">
               <div className="bg-black text-white py-2 px-4 rounded-md">
-                finalist
+                Finalist
               </div>
               <div className="bg-black text-white py-2 px-4 rounded-md">
-                finalist
+              Finalist
               </div>
             </div>
           </div>
           <div className="flex justify-center space-x-4">
             <div className="bg-black text-white py-2 px-4 rounded-md">
-              Team 1
+              Takım 1
             </div>
             <div className="bg-black text-white py-2 px-4 rounded-md">
-              Team 2
+            Takım 2
             </div>
           </div>
           <div className="flex justify-center space-x-4 mt-4">
             <div className="bg-black text-white py-2 px-4 rounded-md">
-              Team 3
+            Takım 3
             </div>
             <div className="bg-black text-white py-2 px-4 rounded-md">
-              Team 4
+            Takım 4
             </div>
           </div>
         </div>
