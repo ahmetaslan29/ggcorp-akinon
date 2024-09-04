@@ -2,15 +2,13 @@ import React from 'react';
 
 const TournamentPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen p-8">
-      {/* 5v5 Turnuva Aşaması */}
+    <div className=" min-h-screen p-8  max-w-4xl mx-auto">
+
       <section className="mb-12">
-        <h2 className="text-3xl font-bold text-center text-purple-800 mb-6">
+        <h2 className="text-3xl font-bold text-center text-[#d2b86a] mb-6">
           5V5 Turnuva Aşaması
         </h2>
-        <div className="flex justify-center">
-          <img src="/5v5-bracket.png" alt="5v5 Turnuva Bracket" className="w-2/3" />
-        </div>
+      
         <h3 className="text-2xl font-semibold mt-8">Kurallar</h3>
         <ul className="list-disc ml-6 mt-4">
           <li>Akinon League of Legends Turnuvası'nda 4 takım mücadele edecektir.</li>
@@ -22,9 +20,8 @@ const TournamentPage = () => {
         </ul>
       </section>
 
-      {/* 1v1 Turnuva Aşaması */}
       <section>
-        <h2 className="text-3xl font-bold text-center text-purple-800 mb-6">
+        <h2 className="text-3xl font-bold text-center text-[#d2b86a] mb-6">
           1 vs 1 Turnuva Aşaması
         </h2>
         <h3 className="text-2xl font-semibold">Kurallar</h3>

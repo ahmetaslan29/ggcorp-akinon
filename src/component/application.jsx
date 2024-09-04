@@ -2,14 +2,14 @@ import React from 'react';
 
 export const Application = () => {
   return (
-    <div className="bg-gray-100 py-8 px-4">
+    <div className=" py-8 px-4 max-w-4xl mx-auto">
       {/* Turnuva Başlığı */}
-      <h2 className="text-3xl font-bold text-center text-purple-700 mb-8">
+      <h2 className="text-3xl font-bold text-center text-black mb-8">
         5V5 Turnuva Aşaması
       </h2>
       
       <div className="flex justify-center mb-12">
-        <div className="bg-blue-900 text-white py-2 px-8 rounded-md text-center w-3/4">
+        <div className="bg-[#d2b86a] text-white py-2 px-8 rounded-md text-center w-3/4">
           <p className="text-lg font-semibold">Büyük Şampiyon</p>
         </div>
       </div>
@@ -51,7 +51,7 @@ export const Application = () => {
 
         {/* Alt Fikstür */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-4">Alt Fikstür (Kaybeden takımlar)</h3>
+          <h3 className="text-2xl font-bold mb-4">Alt Fikstür </h3>
           <div className="mb-8">
             <div className="bg-black text-white py-2 px-4 rounded-md mb-4">
               Alt Fikstür Şampiyonu
