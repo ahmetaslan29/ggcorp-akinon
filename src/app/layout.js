@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Spectral } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/component/header"
+import { Header } from "@/component/header";
 import { Footer } from "@/component/footer";
-const inter = Inter({ subsets: ["latin"] });
+const inter = Spectral({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
   title: "Create Next App",
@@ -13,10 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

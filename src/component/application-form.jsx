@@ -41,7 +41,6 @@ const RegistrationForm = () => {
     // Form verilerini burada işleyebilirsin
     console.log("Form Submitted", teamMembers);
   };
-
   return (
     <div className="max-w-4xl mx-auto p-8  rounded-lg  my-5">
       <h1 className="text-3xl font-bold text-center text-[#d2b86a] mb-6">
@@ -197,22 +196,22 @@ const RegistrationForm = () => {
         </div>
         <div
           className={clsx(
-            "grid grid-cols-1 gap-3",
-            "md:grid-cols-2 md:gap-6 items-center"
+            "flex flex-col flex-nowrap items-center gap-3",
+            "md:flex-row md:gap-6"
           )}
         >
           <Button
             type="button"
             onClick={addTeamMember}
             ref={addButtonRef}
-            className="w-full text-white inline-block  px-6 py-3 !bg-[#4B4B4B] hover:!bg-white hover:border-[#4B4B4B] hover:text-black font-semibold border-transparent"
+            className="w-full !text-sm capitalize tracking-[2px] text-white inline-block px-6 py-3 !bg-[#4B4B4B] hover:!bg-white hover:!border-[#4B4B4B] hover:!text-black font-semibold border-transparent"
           >
             Takım Üyesi Ekle
           </Button>
 
           <Button
             type="submit"
-            className="w-full py-2 px-4 text-white shadow-md bg-[#04a550] border-transparent hover:border-[#04a550] hover:bg-white hover:text-black focus:outline-none"
+            className="!text-sm capitalize tracking-[2px] w-full py-2 px-4 !text-white shadow-md !bg-[#04a550] !border-transparent hover:!border-[#04a550] hover:!bg-white hover:!text-black focus:outline-none"
           >
             Gönder
           </Button>
