@@ -1,11 +1,54 @@
-import React from 'react'
+import clsx from "clsx";
+import Link from "next/link";
 
-const Button = (props) => {
-  return (
-    <button type={props.type} href="#" className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center hover:text-white border hover:border-[#ffc52e] border-[#111111] text-[#ffc52e] rounded-lg bg-[#111111] focus:ring-4 focus:ring-gray-100">
-    {props.title}
-  </button> 
-  )
-}
+export const Button = (props) => {
+  const {
+    appearance = "filled",
+    size = "md",
+    href,
+    target,
+    children,
+    className,
+    ...rest
+  } = props;
 
-export default Button
+  const variants = {
+    filled:
+      "px-4 capitalize tracking-[2px] text-sm h-10 text-xs bg-black text-primary-foreground border border-black transition-all hover:bg-white hover:border-primary hover:text-primary",
+
+    primary:
+      "px-4 capitalize h-10 text-xs bg-primary text-primary-foreground border border-primary transition-all hover:bg-white hover:border-primary hover:text-primary",
+
+    outlined:
+      "bg-transparent border border-gray text-black hover:bg-black hover:text-primary-foreground",
+
+    ghost:
+      "bg-transparent border-transparent text-black hover:bg-black hover:text-primary-foreground",
+    link: "px-0 h-auto underline underline-offset-[]",
+  };
+
+  const sizes = {
+    sm: "h-8",
+    md: "h-10",
+    lg: "h-[46px]",
+    xl: "h-[60px]",
+  };
+
+  const buttonClasses = clsx(
+    "px-8 text-body-xs-wide transition-all duration-300",
+    "inline-flex gap-2 justify-center items-center",
+    variants[appearance],
+    sizes[size],
+    className
+  );
+
+  return props.href ? (
+    <Link target={target} href={href || "#"} className={buttonClasses}>
+      {children}
+    </Link>
+  ) : (
+    <button {...rest} className={buttonClasses}>
+      {children}
+    </button>
+  );
+};
