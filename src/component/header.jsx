@@ -27,7 +27,7 @@ export const Header = () => {
             Anasayfa
           </Link>
           <Link
-            href="/rules"
+            href="#rules"
             className="hover:text-[#ffc52e] py-3 hover:border-b-[#ffc52e] hover:border-b-2 "
           >
             Kurallar

@@ -1,7 +1,9 @@
+"use client";
 import clsx from "clsx";
 import Link from "next/link";
+import React from "react";
 
-export const Button = (props) => {
+export const Button = React.forwardRef((props, ref) => {
   const {
     appearance = "filled",
     size = "md",
@@ -14,7 +16,7 @@ export const Button = (props) => {
 
   const variants = {
     filled:
-      "px-4 capitalize tracking-[2px] text-sm h-10 text-xs bg-black text-primary-foreground border border-black transition-all hover:bg-white hover:border-primary hover:text-primary",
+      "px-4 h-10 text-xs bg-black text-primary-foreground border border-black transition-all hover:bg-white hover:border-primary hover:text-primary",
 
     primary:
       "px-4 capitalize h-10 text-xs bg-primary text-primary-foreground border border-primary transition-all hover:bg-white hover:border-primary hover:text-primary",
@@ -43,12 +45,17 @@ export const Button = (props) => {
   );
 
   return props.href ? (
-    <Link target={target} href={href || "#"} className={buttonClasses}>
+    <Link
+      target={target}
+      ref={ref}
+      href={href || "#"}
+      className={buttonClasses}
+    >
       {children}
     </Link>
   ) : (
-    <button {...rest} className={buttonClasses}>
+    <button {...rest} ref={ref} className={buttonClasses}>
       {children}
     </button>
   );
-};
+});

@@ -20,7 +20,6 @@ export default function MediaPromoBlade() {
           </p>
           <Button
             href="/application"
-            target="_blank"
             rel="noopener noreferrer"
             className="text-white inline-block mt-6 px-6 py-3 !bg-[#4B4B4B] font-semibold rounded-md border-transparent"
           >
